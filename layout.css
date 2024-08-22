@@ -1,0 +1,821 @@
+/*Header laut Bundesministerium XY-Corporate Style Guide*/
+.header-container {
+  width: 1440px;
+  height: 164px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#headerImage {
+width: 109px;
+height: 109px;
+float: left;
+display: flex;
+padding-top: 38px;
+padding-bottom: 38px;
+}
+
+/*Wrapper für Body der Seite*/
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper-body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Anmeldung */
+.login{
+  margin: auto;
+  width: 460px;
+  padding: 40px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 2px 2px #e2e2e2;
+}
+
+#h1Anmeldung {
+  text-align: center;
+}
+
+form-login {
+  flex-direction: column;
+}
+
+.label-anmeldung {
+  margin-bottom: 10px;
+}
+
+input[type="password"]{
+  width: 94%;
+  cursor: text;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 2px inset #e2e2e2;
+  margin-bottom: 10px;
+}
+
+.login table tbody tr {
+  background-color: transparent; /* Ändert die Hintergrundfarbe*/ 
+}
+
+.login table tbody td {
+  border: transparent;
+}
+
+.login table tbody tr:hover{
+  background-color: #99c9cf;
+}
+
+
+/* Die 100%ige Größe des angemeldeten Buttons wird zwischen seiner Breite (40%) und seinen Rändern aufgeteilt (30%, 30%). 
+*/
+#buttonAnmelden[type="submit"]{
+  background-color: #007a89;
+  font-size: large;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 40%;
+  margin-top: 5px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#buttonAnmelden[type="submit"]:hover  {
+  background-color: #000000; 
+}
+
+
+/* Legt die Größe und den Stil der horizontalen Navigationsbar fest */
+.horizontal-nav {
+  display: contents;
+}
+
+.breadcrumb {
+  width: fit-content;
+  margin-left: auto;
+  border-radius: 5px;
+  align-items: flex-end;
+}
+
+.breadcrumb-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.breadcrumb li+li:before{
+  padding: 8px;
+  color: #000000;
+  content: ">>";
+}
+
+.breadcrumb-item.active {
+  color: #2a2a2a;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+/*Der Selektor (:hover) wird verwendet, damit sich die Hintergrundfarbe ändert, wenn der Benutzer mit der Maus über einen Link fährt, um den aktiven Link hervorzuheben.*/
+.breadcrumb-item.active:hover {
+  background-color: #6b6b6b;
+  color:#ffffff;
+  cursor: default;
+}
+
+.breadcrumb-item a {
+  color: #2a2a2a;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: #2a2a2a;
+  text-decoration: underline;
+}
+
+/*Wrapper für den Content*/
+/*Mit dem responsiven Wrapper für den Content passt sich das Rasterlayout an unterschiedliche Bildschirmgrößen an 
+und stapelt die Rasterpunkte auf kleineren Bildschirmen vertikal, um eine optimale Darstellung zu gewährleisten.*/
+.content-wrapper {
+  display: flex;
+  justify-content: left; /* Zentriert den Wrapper links */
+}
+
+main{
+  flex: 1;
+  margin-left: 45px;
+  background-color: transparent;
+}
+
+/*Die Klasse .main-container enthält den Stil von zwei der Hauptunterfunktionen (managen und verwalten) 
+oder Menüs (geöffnete, geschlossene oder abgelehnte Anträge) jeder Hauptfunktion (Antrag-Verwaltung,
+ Benutzer-Verwaltung, Buchungssystem und Dienstauto-Verwaltung) im System. 
+grid-template-columns: repeat(2, 1fr) legt fest, dass das Raster 2 Spalten mit gleicher Breite hat. 
+row-gap: 20px fügt einen Abstand von 20px zwischen den Gitterelementen hinzu.*/
+.main-container{
+  display: grid;
+  height: fit-content;
+  column-gap: 30px;
+  row-gap: 20px;
+  background-color: transparent;
+  padding: 10px;
+  grid-template-columns: repeat(2,1fr);/*Die Funktion repeat() wurde verwendet, um die Anzahl der Spalten zu wiederholen, die in der Eigenschaft grid-template-columns erscheinen sollen. Die Einheit fr (fracture, ein "Bruchteil") wird verwendet, um die Spalten durch einen Bruchteil des freien Bereichs zu trennen.*/
+}
+
+
+
+/* Der Bereich mit den wichtigsten Funktionen, auf die ein Benutzer zugreifen kann, ist mit einer grünen Hintergrundfarbe, Polsterung (Padding) und zentrierter Textausrichtung gestaltet.*/
+.green-bereich{
+  height: 187px;
+  width: 100%;
+  background-color:  #007a89; 
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;  
+}
+
+/*Die Klasse .text-main-container setzt die Textfarbe auf weiß, die Schriftstärke auf lighter und die Schriftgröße auf 44px.*/
+.text-main-container{
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 44px;
+  font-weight: lighter;
+  margin: auto;
+} 
+
+.grid-main-container a:hover{
+  color: #ffffff;
+}
+
+
+/*style for startseite*/
+.pageTitle{
+  margin-left: 0pt;
+}
+
+.text-startseite{
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  font-weight: lighter;
+  margin: auto;
+} 
+
+
+
+/*style for alle Seitentitel*/
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: lighter;
+  color: #4b4b4b;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  color: #4b4b4b;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+.text-aktion {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: lighter;
+  color:#ffffff;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+
+/* style für Suchleiste und vertikale Navigationsleiste */
+#leftWrapper {
+  float: left;
+  width: 260px;
+}
+
+search-bar {
+  display: block;
+  width: 220px;
+}
+
+.search-input{
+  display: flex;
+}
+
+#searchButton[type="submit"] {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: #f2f2f2;
+  padding: 1px 6px;
+  font-size: 16px;
+}
+
+#searchButton[type="submit"]:hover {
+  background-color: #959595;
+ }
+
+#searchInput[type="text"] {
+  cursor: text;
+  width: 200px;
+  text-rendering:auto;
+  letter-spacing:normal;
+  text-align:start;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #e2e2e2;
+  border-image: initial;
+  font-size: 16px;
+}
+
+.vertical-nav a {
+  display: block;
+  padding: 4px 4px;
+  color: #3d3d3d;
+  text-decoration: none;font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  width: 250px; 
+}
+
+.vertical-nav ul {
+  list-style: none;
+  padding: 1px 1px;
+  background-color: #ffffff00;
+  border: 1px dashed #6b6b6b;
+  border-radius: 5px;
+}
+.vertical-nav li {
+  text-align: left;
+  border-bottom: 1px dashed #6b6b6b;
+}
+
+.vertical-nav a:hover {
+  background-color: #6b6b6b;
+  color:#ffffff;
+}
+
+.vertical-nav li:last-child {
+  border-bottom: none;
+}
+
+
+/*Border-radius rundet die Ecken des Abmelden-Buttons ab, float: right richtet die Schaltfläche an der rechten Seite des Bildschirms aus.  
+Durch Hinzufügen von text-align: center zur Klasse wird der Text horizontal zentriert. */
+.white-button {
+  border-radius: 10px;
+  padding: 7px 15px;
+  text-align: center; 
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #ffffff;
+  float:right;
+  color: #000000;
+  border: 1px solid #006d7b;
+}
+
+.white-button:hover{
+  background-color: #007a89;
+  color: #ffffff;
+}
+
+/*Wrapper für die Rückwärts-Taste*/
+.button-wrapper {
+  display: flex;
+  margin-left: 90%;
+  margin-right: 10%;
+}
+
+/*Format für den Container von Anträge*/
+/* Legt die Größe und andere Stile der Anträge (ausstehende Anträge, geöffnete Anträge, abgelehnte Anträge und geschlossene Anträge) fest */
+.antraege-container {
+  height: 60%;
+  overflow-y: scroll;
+  max-width: 700px;
+  margin: 0 auto;
+  display: block;
+  background-color: transparent;
+}
+
+/*Format für den Container von Anträge*/
+.antraegeverwalten-container {
+  height: 60%;
+  overflow-y: scroll;
+  width: 600px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+/*Format für den Container von Benutzermanagen*/
+.benutzermanagen-container{
+  height: 60%;
+  overflow-y: scroll;
+  max-width: 735px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+/*Format für den Container von Dienstauto managen*/
+.dienstautomanagen-container {
+  height: 60%;
+  overflow-y: scroll;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+/*Format für die Tabelle bei abgelehnte Anträge, ausstehende Anträge, geöffnete Anträge und geschlossene Anträge*/
+/*Die Anträge werden mit einem <table>-Element angeordnet. Jedes Feld befindet sich innerhalb eines <tr>-Elements (Tabellenzeile). 
+Jede Zeile enthält vier <td>-Elemente (Tabellenzellen). Das <table>-Element hat eine Breite von 100 % und die Einstellung border-collapse: collapse, um den Abstand zwischen den Tabellenzellen zu eliminieren.
+Die <td>-Zellen haben eine Auffüllung und eine Umrandung, um sie visuell zu trennen.*/
+table {
+  border-collapse: collapse;/*Entfernt die Abstände zwischen den Tabellenzellen.*/
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+thead th {
+  background-color: #007a89;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #dee3ed;
+}
+
+tbody td {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 1px solid #dee3ed;
+}
+
+
+.body tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: #eaeaea;
+}
+
+tbody tr:nth-child(even):hover {
+  background-color: #99c9cf;
+}
+
+tr:hover{
+  background-color: #99c9cf;
+}
+
+
+/* Legt die Größe und andere Stile der Formular-Container fest */
+.formular-container{
+  max-width:600px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+
+.details {
+  width: 100%;
+  justify-items: left;
+  color: #000000;
+  text-decoration: none;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  border-radius: 5px;
+}
+
+/*Formular für das Benutzer anlegen*/
+.formular-benutzeranlegen{
+  border-collapse: collapse;
+  columns: 2;
+  max-width:max-content;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  border-radius: 10px;
+  column-gap: 25px;
+  height: 280px;
+}
+
+.inputBenutzeranlegen[type="text"] {
+  margin-left: 5px;
+  width: max-content; 
+  cursor: text;
+  text-rendering:auto;
+  letter-spacing:normal;
+  text-align:start;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  border-image: initial;
+  font-size: 16px;
+}
+
+.formSelect{
+  margin-bottom: 5px;
+}
+
+.form-rowbenutzeranlegen {
+  border-bottom: transparent;
+  height:40px;
+}
+
+.form-tdbenutzeranlegen {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: transparent;
+  width: 45%;
+}
+
+.formular-benutzeranlegen table tbody tr:last-child:hover {
+  background-color: #99c9cf; /* Ändert die Hintergrundfarbe beim Hovern */
+}
+
+/*Formular für Dienstauto
+Das Formular zum Hinzufügen eines Fahrzeugs verwendet seinen eigenen Stil "formular-dienstautocontainer", um die Informationen, die der Benutzer ausfüllen muss, anzuordnen, da die Informationen optisch besser in zwei Spalten angeordnet sind.
+Mit der Klasse "form-row" werden alle Zeilen des Formulars gestaltet. Jede Zeile hat eine eindeutige ID zur Identifizierung der jeweiligen Zeile. 
+Diese Klassen und IDs ermöglichen es, bestimmte Zeilen in CSS zu unterstreichen und zu gestalten oder bestimmte Operationen mit JavaScript durchzuführen.
+Der Eingabestil "text" ist ein kürzerer Stil, der zum Ausfüllen anderer Formulare auf der Seite verwendet wird, da das in diesem Formular erforderliche Feld weniger Zeichen benötigt als in anderen Formularen. 
+Die Klasse "form-td" formatiert jede Zelle einer Tabelle, die Daten enthält. 
+Schließlich wurde der Hover-Stil angepasst, um jede Zeile hervorzuheben, wenn der Benutzer darauf klickt. */
+.formular-dienstautocontainer{
+  border-collapse: collapse;
+  columns: 2;
+  width: max-content;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  border-radius: 5px;
+  column-gap: 5px;
+}
+
+/*Text Format für Formulare (Suche und Antrag erstellen)
+Input-Felder sind mit width: 90% gestylt und padding: 10px 10px für den Abstand.
+Das Attribut type="text" ermöglicht die Eingabe von Text.*/
+input[type="text"] {
+  margin-left: 5px;
+  width: 94%;
+  cursor: text;
+  text-rendering:auto;
+  letter-spacing:normal;
+  text-align:start;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #e2e2e2;
+  border-image: initial;
+  font-size: 16px;
+}
+
+
+.input-klein[type="text"]{
+  width: 35%;
+  padding: 5px 5px;
+  place-items: end;
+}
+
+.input-gross[type="text"] {
+  width: 200px; 
+  padding: 10px 10px;
+}
+
+.form-row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: transparent;
+}
+
+.form-td {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-bottom: transparent;
+}
+
+td.options {
+  white-space: nowrap;
+}
+
+/* Style für den Hover der letzten Zeile der Tabelle */
+.formular-dienstautocontainer table tbody tr:last-child:hover {
+  background-color: #99c9cf; /* Ändert die Hintergrundfarbe beim Hovern */
+}
+
+
+/* Input für "Antrag erstellen" Formular */
+/* Das Attribut type="datetime-local" ermöglicht die Eingabe von Datum und Uhrzeit. */
+input[type="datetime-local"] {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 350px;
+  cursor: text;
+  text-rendering:auto;
+  letter-spacing:normal;
+  text-align:start;
+  padding: 10px 10px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #e2e2e2;
+  background-color: #ffffff;
+  border-image: initial;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  margin-left: 5px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #e2e2e2;
+  border-image: initial;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  margin-left: 5px;
+  margin-top: 18px !important;
+  width:auto;
+  cursor:none;
+  appearance: auto;
+  box-sizing: border-box;
+  text-align:left;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #e2e2e2;
+  border-image: initial;
+  font-size: 16px;
+}
+
+.button[type="submit"]{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  background-color: #007a89;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-top: 14px !important;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 5px;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+.blau-btn{
+  padding: 5px 10px;
+  font-weight: lighter;
+  background-color: #0300bd;
+  text-decoration: none;
+  font-size: medium;
+  color: white;
+  border-radius: 5px;
+}
+
+.blau-btn:hover{
+  background-color: #F9E03A;
+  color: #000000;
+}
+
+.schwarz-btn{
+  background-color: #000000;
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.schwarz-btn:hover{
+  background-color: #C0003C;
+  color: #ffffff;
+}
+
+.tourkis-btn[type="submit"]{
+ float: left;
+}
+
+.antragErstellen[type="submit"]{
+  margin-left: 35.7%;
+}
+
+.antragbearbeiten-btn{
+  padding: 5px 10px;
+  margin-top:10px;
+  margin-left: 20%;
+  margin-right: 0%;
+  background-color: royalblue;
+}
+
+#demoantrag-text:visited{
+  color: #ffffff;
+}
+
+
+/*Fehler Meldung*/
+.dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog:target {
+  display: block;
+}
+
+.content-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 999;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: larger;
+}
+
+.dialog-close {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color:#006d7b7e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/*Warnung stornieren*/
+.zweibuttons-wrapper {
+  display: flex;
+  margin-left: 35%;
+  margin-right: 45%;
+}
+
+.dialog-b {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-b:target {
+  display: block;
+}
+
+.content-dialog-stornieren {
+  font-family: Arial, Helvetica, sans-serif;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*wird verwendet, um die angezeigte Meldung zu zentrieren.*/
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 20px 10px 20px 10px;
+  text-align: justify;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.dialog-stornieren {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+  width: 77px;
+  padding: 5px;
+  margin-left: 10%;
+  background-color:#000000;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dialog-stornieren:hover {
+  background-color: #ff3535;
+
+}
+
+/* Footer*/
+.footer {
+  position: fixed;
+  width: 100%;
+  box-sizing: content-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+  font-size: small;
+  background-color: #eaeaea;
+  padding: 20px;
+  bottom: 0;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex-basis: 30%;
+}
+
+.tlorem { 
+  font-family: Arial, Helvetica, sans-serif;
+}
