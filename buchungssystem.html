@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Fuhrparksystem</title>
+    <link rel="stylesheet" href="/css/layout.css">
+  </head>
+  <body>
+    <div class="wrapper-body">
+      <header class="header-container">
+        <img id="headerImage" src="/images/1x/bundeslogo.png"
+          alt="Bundesministerium Logo" />
+      </header>
+      <nav class="horizontal-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a
+              href="/allebenutzer/intranetanmeldung.html">Intranet</a></li>
+          <li class="breadcrumb-item"><a href="/allebenutzer/startseite.html">Startseite</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Buchungssystem</li>
+        </ol>
+      </nav>
+      <div>
+        <button class="button white-button" name="abmelden" type="button">abmelden</button>
+      </div>
+      <div class="content-wrapper">
+        <div id="leftWrapper" class="search-bar">
+          <form action="#" method="get">
+            <div class="search-input">
+              <input type="text" id="searchInput" aria-label="Suche"
+                placeholder="Suche" required>
+              <button type="submit" id="searchButton">
+                <img src="/icons/search.png"
+                  alt="dieses Bild zeigt ein Lupen-Symbol" width="20"
+                  height="20">
+              </button>
+            </div>
+          </form>
+          <nav class="vertical-nav">
+            <ul>
+              <li>
+                <a href="/allebenutzer/startseite.html">
+                  <img src="/icons/home.png"
+                    alt="dieses Bild zeigt ein Haus-Symbol">
+                  Startseite
+                </a>
+              </li>
+              <li>
+                <a href="/dienstautobenutzer/buchungssystem.html">
+                  <img src="/icons/calendar_time.png"
+                    alt="dieses Bild zeigt ein Kalender-Symbol">
+                  Buchungssystem
+                </a>
+              </li>
+              <li>
+                <a href="#dialog" class="dialog-open"><!--Da Dienstfahrzeugnutzer (die nicht die Rolle eines internen Servicemitarbeiters haben) nicht auf alle Funktionalitäten des Fuhrparkmoduls zugreifen können, sind die Links in der Navigationsleiste zu diesen Funktionalitäten für diese Nutzer deaktiviert, 
+                  was sich in einer Popup-Meldung niederschlagen sollte, die den Nutzer darüber informiert, dass der Zugriff verweigert wurde.  
+                  Um jedoch ein echtes Pop-up-Fenster in der Praxis zu implementieren, ist es besser, JavaScript zu verwenden, um dessen Öffnen und Schließen zu steuern, was nicht Teil des Ziels dieser Arbeit ist. 
+                  Zur Veranschaulichung eines solchen Effekts, der nur HTML und CSS verwendet, war es daher notwendig, ihn zu simulieren. 
+                  Dies wurde durch die Erstellung eines Overlay-Effekts erreicht, der durch die Verwendung der Pseudoklasse :target und die interne Umleitung der Seite beim Klicken auf einen Link (<a>) einem Dialogfenster ähnelt. 
+                  Die Verwendung des URL-Fragments (#dialog) dient als Bezeichner, auf den der Link verweist. 
+                  Beim Anklicken wird der Inhalt des Elements mit der entsprechenden Kennung angezeigt, wodurch der Effekt eines Dialogfensters entsteht. Der Link "Schließen" wird verwendet, um das Schließen des Dialogs zu simulieren, da ein Klick darauf die Seite in ihren ursprünglichen Zustand zurückversetzt.-->
+
+                  <img src="/icons/key.png"
+                    alt="dieses Bild zeigt ein Schl&uuml;ssel-Symbol">
+                    Fahrzeugzuweisung</a>
+                <div id="dialog" class="dialog">
+                  <div class="content-dialog">
+                    <a href="#" class="dialog-close">schließen</a>
+                    <p>Zugang abgelehnt</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#dialog" class="dialog-open">
+                  <img src="/icons/users.png"
+                    alt="dieses Bild zeigt ein User-Symbol">
+                  Benutzerverwaltung</a>
+                <div id="dialog" class="dialog">
+                  <div class="content-dialog">
+                    <a href="#" class="dialog-close">schließen</a>
+                    <p>Zugang abgelehnt</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#dialog" class="dialog-open">
+                  <img src="/icons/car.png"
+                    alt="dieses Bild zeigt ein Auto-Symbol">
+                    Dienstautoverwaltung</a>
+                <div class="dialog">
+                  <div class="content-dialog">
+                    <a href="#" class="dialog-close">schließen</a>
+                    <p>Zugang abgelehnt</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/settings.png"
+                    alt="dieses Bild zeigt ein Zahnrad-Symbol">
+                  Einstellungen
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/question.png"
+                    alt="dieses Bild zeigt ein Fragezeichen-Symbol">
+                  Hilfe
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <main>
+          <h1>Buchungssystem</h1>
+          <div class="main-container">
+            <a href="/dienstautobenutzer/antragerstellen.html">
+              <div class="green-bereich">
+                <h2 class="text-main-container">Antrag erstellen</h2>
+              </div>
+            </a>
+            <a href="/dienstautobenutzer/antragverwaltung.html">
+              <div class="green-bereich">
+                <h2 class="text-main-container">Antragverwaltung</h2>
+              </div>
+            </a>
+            <a href="/dienstautobenutzer/meineabgelehnteantraege.html">
+              <div class="green-bereich">
+                <h2 class="text-main-container">meine abgelehnten Anträge</h2>
+              </div>
+            </a>
+            <a href="/dienstautobenutzer/meinegeschlosseneantraege.html">
+              <div class="green-bereich">
+                <h2 class="text-main-container">meine geschlossenen Anträge</h2>
+              </div>
+            </a>
+          </div>
+          <div class="button-wrapper">
+            <button onclick="history.go(-1)" class="button white-button">z&uuml;ruck</button id="z&uuml;ruck" typ="submit">
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <a href="#">Impressum</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Datenschutz</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte
+            vorbehalten.</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

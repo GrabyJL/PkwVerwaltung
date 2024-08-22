@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Fuhrparksystem</title>
+    <link rel="stylesheet" href="/css/layout.css">
+  </head>
+  <body>
+    <div class="wrapper-body">
+      <header class="header-container">
+        <img id="headerImage" src="/images/1x/bundeslogo.png"
+          alt="Bundesministerium Logo" />
+      </header>
+      <nav class="horizontal-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a
+              href="/allebenutzer/intranetanmeldung.html">Intranet</a></li>
+          <li class="breadcrumb-item"><a href="/allebenutzer/startseite.html">Startseite</a></li>
+          <li class="breadcrumb-item"><a href="/dienstautobenutzer/buchungssystem.html">Buchungssystem</a></li>
+          <li class="breadcrumb-item active" aria-current="page">meine geschlossenen
+            Antr&auml;ge</li>
+        </ol>
+      </nav>
+      <div>
+        <button class="button white-button" name="abmelden" type="button">abmelden</button>
+      </div>
+      <div class="content-wrapper">
+        <div id="leftWrapper" class="search-bar">
+          <form action="#" method="get">
+            <div class="search-input">
+              <input type="text" id="searchInput" aria-label="Suche"
+                placeholder="Suche" required>
+              <button type="submit" id="searchButton">
+                <img src="/icons/search.png"
+                  alt="dieses Bild zeigt ein Lupen-Symbol" width="20"
+                  height="20">
+              </button>
+            </div>
+          </form>
+          <nav class="vertical-nav">
+            <ul>
+              <li>
+                <a href="/allebenutzer/startseite.html">
+                  <img src="/icons/home.png"
+                    alt="dieses Bild zeigt ein Haus-Symbol">
+                  Startseite
+                </a>
+              </li>
+              <li>
+                <a href="/dienstautobenutzer/buchungssystem.html">
+                  <img src="/icons/calendar_time.png"
+                    alt="dieses Bild zeigt ein Kalender-Symbol">
+                  Buchungssystem
+                </a>
+              </li>
+              <li>
+                <a href="#dialog" class="dialog-open">
+                  <img src="/icons/key.png"
+                    alt="dieses Bild zeigt ein Schl&uuml;ssel-Symbol">
+                    Fahrzeugzuweisung</a>
+                <div id="dialog" class="dialog">
+                  <div class="content-dialog">
+                    <a href="#" class="dialog-close">schließen</a>
+                    <p>Zugang abgelehnt</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#dialog" class="dialog-open">
+                  <img src="/icons/users.png"
+                    alt="dieses Bild zeigt ein User-Symbol">
+                  Benutzerverwaltung</a>
+                <div id="dialog" class="dialog">
+                  <div class="content-dialog">
+                    <a href="#" class="dialog-close">schließen</a>
+                    <p>Zugang abgelehnt</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#dialog" class="dialog-open">
+                  <img src="/icons/car.png"
+                    alt="dieses Bild zeigt ein Auto-Symbol">
+                    Dienstautoverwaltung</a>
+                <div class="dialog">
+                  <div class="content-dialog">
+                    <a href="#" class="dialog-close">schließen</a>
+                    <p>Zugang abgelehnt</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/settings.png"
+                    alt="dieses Bild zeigt ein Zahnrad-Symbol">
+                  Einstellungen
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/question.png"
+                    alt="dieses Bild zeigt ein Fragezeichen-Symbol">
+                  Hilfe
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <main>
+          <div>
+            <h1>geschlossene Antr&auml;ge</h1>
+            <h2>Benutzer Satoshi Nakamoto</h2>
+            <div class="antraege-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">ID Antr&auml;ge</th>
+                    <th scope="col">Datum</th>
+                    <th scope="col">Auto</th>
+                    <th scope="col">Modell</th>
+                    <th scope="col">Kilometerstand</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A0031</td>
+                    <td>01.01.2023</td>
+                    <td>Mercedes-Benz</td>
+                    <td>S 580</td>
+                    <td>10.423</td>
+                  </tr>
+                  <tr>
+                    <td>A0032</td>
+                    <td>01.01.2023</td>
+                    <td>Mercedes-Benz</td>
+                    <td>S 580</td>
+                    <td>10.438</td>
+                  </tr>
+                  <tr>
+                    <td>A0033</td>
+                    <td>02.01.2023</td>
+                    <td>Mercedes-Benz</td>
+                    <td>S 580</td>
+                    <td>10.481</td>
+                  </tr>
+                  <tr>
+                    <td>A0034</td>
+                    <td>02.01.2023</td>
+                    <td>Mercedes-Benz</td>
+                    <td>S 580</td>
+                    <td>10.532</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="button-wrapper">
+              <button onclick="history.go(-1)" class="button white-button">z&uuml;ruck</button id="z&uuml;ruck" typ="submit">
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <a href="#">Impressum</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Datenschutz</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte
+            vorbehalten.</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
