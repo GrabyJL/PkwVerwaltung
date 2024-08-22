@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--Die Erstellung eines HTML-Dokumentes beginnt mit dem Tag <!DOCTYPE html>, das dem Webbrowser mitteilt, welche Version von HTML (HTML5) verwendet wird. 
+   Der nächste Teil der Struktur besteht aus dem <html>-Tag und dem abschließenden </html>-Tag, die zusammen den allgemeinen Container für den Rest von HTML und CSS auf der Seite definieren. -->
+<html lang="de">
+  <!--Das erste Attribut des <html>-Tags ist lang="de", was dem Browser mitteilt, dass die Hauptsprache der Seite Deutsch ist.-->
+  <head>
+    <!-- Der <head>-Abschnitt ist wie eine Einführung in die Seite, da Webbrowser den Head nutzen, um verschiedene Informationen über die Seite zu erhalten. -->
+    <meta charset="UTF-8" /><!-- Legt die Zeichenkodierung fest -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><!-- Definiert die Kompatibilität mit dem Browser Edge -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Konfiguriert die Anzeige auf mobilen Geräten -->
+    <title>Fuhrparksystem</title>
+    <!--
+         <title>-Tags werden verwendet, um Seitentitel zu definieren. Jeder Titel spiegelt das Thema der Seite wider, sodass jemand ohne Kontext ihn verstehen kann, das Tag muss einzigartig sein und sollte wenige Wörter umfassen- damit er in Browser-Tabs angezeigt werden kann -.-->
+    <link rel="stylesheet" href="/css/layout.css">
+    <!--Das <link>-Tag wird verwendet, um das Style-Sheet, das auf der Seite angewendet wird, zu importieren.-->
+  </head>
+  <body>
+    <div class="wrapper-body"></div>
+    <!--Das <body>-Tag markiert den Bereich, der die unterschiedlichen Bereiche (Bilder, Texte, usw.), die im Webbrowser angezeigt werden, enthält.-->
+    <header>
+      <div class="header-container">
+        <!--Die <div>-Tags werden verwendet, um verschiedene Texte und Elemente auf jeder Seite des Intranet-Fuhrparkmoduls in Blöcke zu unterteilen.-->
+        <!--Das Logo ist in einem <div>-Tag mit der Klasse "header-container" enthalten.
+               Das Attribut class= "header-container" wendet einen Stil (definiert in dem Stylesheet, das oben importiert wurde) auf den Header an.-->
+        <img id="headerImage" src="/images/1x/bundeslogo.png"
+          alt="Bundesministerium Logo" /><!-- Headerbild mit seiner Beschreibung -->
+        <!--Das <img>-Tag hat ein src-Attribut, das die URL der Bilddatei angibt.-->
+        <!--id="headerImage" wendet einen Stil auf das Bild an.-->
+        <!--Das Attribut "alt" wird verwendet, um die Zugänglichkeit für Screenreader zu verbessern. Es bietet eine Textalternative zum Element "Bundes-Logo" mit einer Beschreibung seiner selbst, da es keinen sichtbaren Text auf dem Bildschirm hat.-->
+      </div>
+    </header>
+    <nav class="horizontal-nav">
+      <!-- Das <nav>-Tag definiert die Navigationslinks, auf die der Benutzer klicken kann, um zwischen den Hauptseiten der Modulstruktur zu navigieren.-->
+      <ol class="breadcrumb"><!-- Liste der vorherigen Seitennavigation -->
+        <!--Das <ol>- Tag definiert eine geordnete Liste.-->
+        <li class="breadcrumb-item"><a
+            href="/allebenutzer/intranetanmeldung.html">Intranet</a></li>
+        <!--Das <li>-Tag wird verwendet, um jedes Listenelement zu definieren.-->
+        <!--Das Attribut href="/allebenutzer/intranetanmeldung.html" leitet die Nutzer auf die Hauptseite des Intranets. 
+               Da dies nicht Teil der Entwicklung dieses Moduls ist, wurde beschlossen, den Nutzer nur zur Veranschaulichung auf die Intranetseite weiterzuleiten, auf der er sich anmelden muss. -->
+        <li class="breadcrumb-item active" aria-current="page">Startseite</li><!-- aktuelle Seite -->
+      </ol>
+    </nav>
+    <div>
+      <button class="button white-button" name="abmelden" type="button">abmelden</button><!-- Button für die Abmeldung -->
+      <!--Ein Knopf kann mehrere Attribute haben, in diesem Fall Name und Type, die die Art des Knopfes angibt. -->
+    </div>
+    <main>
+      <!--Das Tag <main> wird verwendet, um den Hauptinhalt der Website anzugeben.-->
+      <h1 class="pageTitle">Willkomen im Fuhrparksystem des Bundes</h1>
+      <section class="main-container">
+        <!--Das <section>-Tag definiert einen Ausschnitt in einem Dokument.-->
+        <a href="/inneredienstbenutzer/benutzerverwaltung.html">
+          <!--Das <a>-Tag in Verbindung mit dem href-Attribut ermöglicht dem Benutzer den Zugriff auf die Seite, auf die der Hyperlink zeigt, in diesem Fall die Benutzerverwaltung-Seite-->
+          <div class="green-bereich">
+            <h2 class="text-startseite">Benutzerverwaltung</h2>
+          </div>
+        </a>
+        <a href="/dienstautobenutzer/buchungssystem.html">
+          <div class="green-bereich">
+            <h2 class="text-startseite">Buchungssystem</h2>
+          </div>
+        </a>
+        <a href="/inneredienstbenutzer/dienstautoverwaltung.html">
+          <div class="green-bereich">
+            <h2 class="text-startseite">Dienstautoverwaltung</h2>
+          </div>
+        </a>
+        <a href="/inneredienstbenutzer/fahrzeugzuweisung.html">
+          <div class="green-bereich">
+            <h2 class="text-startseite">Fahrzeugzuweisung</h2>
+          </div>
+        </a>
+      </section>
+    </main>
+    <div class="button-wrapper">
+      <button onclick="history.go(-1)" class="white-button"
+        id="z&uuml;ruck" type="submit">z&uuml;ruck</button>
+      <!--Die Methode history.go(-1) wurde verwendet, um dem Benutzer die Möglichkeit zu geben, zur vorherigen besuchten Seite zu navigieren. -->
+    </div>
+<!--
+      @TODO werden die beiden Blöcke benötigt? laut w3org es ist "nice to have"
+-->
+    <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss"
+          alt="CSS ist valide!" />
+      </a>
+    </p>
+    CSS ist valide!
+    <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+          alt="CSS ist valide!" />
+      </a>
+    </p>
+    <div>
+      <footer class="footer">
+        <!--Das <footer>-Tag wird verwendet, um eine Fußzeile der Seite zu definieren, sie enthält Informationen über die Eigentümerschaft, das Copyright und die Datenschutzrichtlinien. -->
+        <!--Die Klasse footer legt den Gesamtbereich der Fußzeile fest, die Klasse footer-columns umschließt die Spalten in einem Bereich, der sich an die Größe der Seite anpasst. 
+               Mit der Klasse footer-column wird auch die Größe jeder Spalte, die Teil der Fußzeile ist, festgelegt.  -->
+        <!--Die CSS-Stile geben der footer-Klasse eine hellgraue Hintergrundfarbe und 20 Pixel Polsterung am oberen und unteren Rand. -->
+        <div class="footer-columns">
+          <div class="footer-column">
+            <a href="#">Impressum</a>
+          </div>
+          <div class="footer-column">
+            <a href="#">Datenschutz</a>
+          </div>
+          <div class="footer-column">
+            <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte
+              vorbehalten.</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

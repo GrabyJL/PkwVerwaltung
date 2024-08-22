@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuhrparksystem</title>
+    <meta
+      name="keywords"
+      content="Bundesverwaltung, Intranet, Dienstauto, Fuhrpark" />
+    <meta
+      name="description"
+      content="Verwaltung der Fuhrpark des Bundesministerium 'XY'." />
+    <link rel="stylesheet" href="/css/layout.css">
+  </head>
+
+  <body id="body-anmeldung">
+    <!--
+         Um ein eindeutiges Design für den Titel (h1), die Eingaben und die Schaltflächen auf unserer "Intranet"-Anmeldeseite zu gewährleisten, wird ihr Stil aus der Datei "layout.css" importiert. 
+         Der gesamte Seiteninhalt wird in das <body>-Tag eingeschlossen, das eine Höhe von 100% hat, um jede Bildschirmgröße abzudecken. Die Klasse "wrapper-body" fasst den gesamten Webseiteninhalt zusammen und hat ein responsives Design
+      -->
+    <div class="wrapper-body">
+      <header class="header-container">
+        <img id="headerImage" src="/images/1x/bundeslogo.png"
+          alt="Bundesministerium Logo" />
+      </header>
+      <main>
+        <!--Das id-Attribut wurde auf dieser Seite verwendet, um die spezifischen Attribute der einzelnen Elemente des Anmelde-Containers eindeutig zu identifizieren. 
+               In HTML wird <input> verwendet, wenn der Benutzer Informationen eingeben kann, type gibt die Art der Informationen an, die der Benutzer eingeben muss (Benutzername und Kennwort), und das Attribut button zeigt dem System und dem Benutzer an, dass es sich um ein anklickbares Element handelt, das die Informationen sendet, mit denen sich der Benutzer beim System anmelden kann (submit). -->
+        <div class="login">
+          <h1 id="h1Anmeldung">Anmeldung</h1>
+          <!--
+                  Normalerweise müsste ein Formular (<form>) eine "action" beinhalten, die das Ziel des Formulars angibt. Da es sich
+                  hier aber nur um eine grafische Darstellung ohne Funktionalität handelt, wurde keine action angegeben.
+               -->
+          <form class="form-login">
+            <table id="intranet-login">
+              <tbody>
+                <tr>
+                  <td>
+                    <label class="label-anmeldung" for="benutzername">Benutzername:</label>
+                  </td>
+                  <td> <input type="text" id="benutzername"
+                      name="benutzername" required>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="label-anmeldung" for="passwort">Passwort:</label>
+                  </td>
+                  <td> <input type="password" id="passwort" name="passwort"
+                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="submit" id="buttonAnmelden">anmelden</button>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">
+        <!--Das <footer>-Tag wird verwendet, um eine Fußzeile der Seite zu definieren, sie enthält Informationen über die Eigentümerschaft, das Copyright und die Datenschutzrichtlinien. -->
+        <!--Die Klasse footer legt den Gesamtbereich der Fußzeile fest, die Klasse footer-columns umschließt die Spalten in einem Bereich, der sich an die Größe der Seite anpasst. 
+              Mit der Klasse footer-column wird auch die Größe jeder Spalte, die Teil der Fußzeile ist, festgelegt.
+              -->
+       
+        <!--Die CSS-Stile geben der footer-Klasse eine hellgraue Hintergrundfarbe und 20 Pixel Polsterung am oberen und unteren Rand. -->
+        <div class="footer-columns">
+          <div class="footer-column">
+                        <!--
+                    normalerweise würde im Attribut href die URL des Impressums stehen. Da es aber nur um eine exemplarische Darstellung
+                    der Seite geht, existieren die Seiten für Impressum, Datenschutz und Urheberrecht nicht. Als "Platzhalter" wird #
+                    verwendet, was einem Verweis auf die derzeitige Seite entspricht.
+                 -->
+            <a href="#">Impressum</a>
+          </div>
+          <div class="footer-column">
+            <a href="#">Datenschutz</a>
+          </div>
+          <div class="footer-column">
+            <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte
+              vorbehalten.</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
