@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Fuhrparksystem</title>
+      <link rel="stylesheet" href="/css/layout.css">
+   </head>
+   <body>
+      <div class="wrapper-body">
+         <header class="header-container">
+            <img id="headerImage" src="/images/1x/bundeslogo.png" alt="Bundesministerium Logo" />
+         </header>
+         <nav class="horizontal-nav" aria-label="breadcrumb">
+          <ol class="breadcrumb" >
+            <li class="breadcrumb-item"><a href="/allebenutzer/intranetanmeldung.html">Intranet</a></li>
+            <li class="breadcrumb-item"><a href="/allebenutzer/startseite.html"></a>Startseite</li>
+            <li class="breadcrumb-item"><a href="/inneredienstbenutzer/fahrzeugzuweisung.html">Anträge</a></li>
+            <li class="breadcrumb-item active" aria-current="page">austehende Anträge</li>
+         </ol>
+        </nav>
+        <div>
+          <button class="button white-button" name="abmelden" type="button">abmelden</button>
+        </div>
+
+        <div class="content-wrapper">
+          <div id="leftWrapper" class="search-bar">
+            <form action="#" method="get" >
+              <div class="search-input">
+                <input type="text" id="searchInput" aria-label= "Suche" placeholder="Suche" required>
+                <button type="submit" id="searchButton">
+                  <img src="/icons/search.png" alt="dieses Bild zeigt ein Lupen-Symbol" width="20" height="20">
+                </button>
+              </div>
+            </form>  
+            <nav class="vertical-nav">
+              <ul>
+                <li>
+                   <a href="/allebenutzer/startseite.html">
+                   <img src="/icons/home.png" alt="dieses Bild zeigt ein Haus-Symbol">
+                   Startseite
+                   </a>
+                </li>
+                <li>
+                  <a href="/dienstautobenutzer/buchungssystem.html">
+                  <img src="/icons/calendar_time.png" alt="dieses Bild zeigt ein Kalender-Symbol">
+                  Buchungssystem
+                  </a>
+               </li>
+               <li>
+                <a href="/inneredienstbenutzer/fahrzeugzuweisung.html">
+                <img src="/icons/key.png" alt="dieses Bild zeigt ein Schlüssel-Symbol">
+                Fahrzeugzuweisung
+                </a>
+             </li>
+               <li>
+                  <a href="/inneredienstbenutzer/benutzerverwaltung.html">
+                  <img src="/icons/users.png" alt="dieses Bild zeigt ein User-Symbol">
+                  Benutzerverwaltung
+                  </a>
+               </li>
+               <li>
+                  <a href="/inneredienstbenutzer/dienstautoverwaltung.html">
+                  <img src="/icons/car.png" alt="dieses Bild zeigt ein Auto-Symbol">
+                  Dienstautoverwaltung
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                  <img src="/icons/settings.png" alt="dieses Bild zeigt ein Zahnrad-Symbol">
+                  Einstellungen
+                  </a>  
+               </li>
+               <li>
+                  <a href="#">
+                  <img src="/icons/question.png" alt="dieses Bild zeigt ein Fragezeichen-Symbol">
+                  Hilfe
+                  </a>
+               </li>
+              </ul>    
+            </nav>
+          </div>
+          <main>
+            <div>
+              <h1>austehende Anträge</h1>
+            </div>
+            <div class="antraege-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">ID Antrag</th>
+                    <th scope="col">Datum</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Abteilung</th>
+                    <th scope="col">Aktion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">A0010</a></td>
+                    <td>01.05.2023</td>
+                    <td>Satoshi Nakamoto</td>
+                    <td>Entwicklung</td>
+                    <td class="aktionen">
+                      <button class="blau-btn"><a id="demoantrag-text" href="/inneredienstbenutzer/a0010.html">&ouml;ffen</a></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">A0014</a></td>
+                    <td>02.05.2023</td>
+                    <td>Jane Doe</td>
+                    <td>Marketing</td>
+                    <td class="aktionen">
+                      <button class="blau-btn">&ouml;ffen</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">A0015</a></td>
+                    <td>03.05.2023</td>
+                    <td>Lara Craft</td>
+                    <td>Marketing</td>
+                    <td class="aktionen">
+                      <button class="blau-btn">&ouml;ffen</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">A0016</a></td>
+                    <td>04.05.2023</td>
+                    <td>Sara Lee</td>
+                    <td>Finanzen</td>
+                    <td class="aktionen">
+                      <button class="blau-btn">&ouml;ffen</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="button-wrapper">
+              <button onclick="history.go(-1)" class="white-button"
+              id="z&uuml;ruck" type="submit">z&uuml;ruck</button>
+          </div>
+          </main>
+        </div>
+      </div>
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <a href="#">Impressum</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Datenschutz</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte vorbehalten.</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+    

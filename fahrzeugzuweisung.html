@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Fuhrparksystem</title>
+      <link rel="stylesheet" href="/css/layout.css">
+   </head>
+   <body>
+      <div class="wrapper-body">
+      <header class="header-container">
+         <img id="headerImage" src="/images/1x/bundeslogo.png" alt="Bundesministerium Logo" />
+      </header>
+      <nav class="horizontal-nav" aria-label="breadcrumb">
+         <ol class="breadcrumb" >
+            <li class="breadcrumb-item"><a href="/allebenutzer/intranetanmeldung.html">Intranet</a></li>
+            <li class="breadcrumb-item"><a href="/allebenutzer/startseite.html">Startseite</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Fahrzeugzuweisung</li>
+         </ol>
+      </nav>
+      <div>
+         <button class="button white-button" name="abmelden" type="button">abmelden</button>
+      </div>
+      <div class="content-wrapper">
+         <div id="leftWrapper" class="search-bar">
+            <form action="#" method="get" >
+               <div class="search-input">
+                  <input type="text" id="searchInput" aria-label= "Suche" placeholder="Suche" required>
+                  <button type="submit" id="searchButton">
+                  <img src="/icons/search.png" alt="dieses Bild zeigt ein Lupen-Symbol" width="20" height="20">
+                  </button>
+               </div>
+            </form>
+            <nav class="vertical-nav">
+               <!--Das <nav>-Element mit der Klasse "vertical-nav" enthält die Struktur der vertikalen Navigationsleiste in Form einer ungeordneten Liste (<ul>).
+                  Jedes Element der Navigationsleiste wird mit dem Tag (<li>) hinzugefügt, das wiederum das <a>-Element mit dem Link zu der zu öffnenden Seite enthält, und das Symbol jedes Elements der Navigationsleiste wird mit dem <img>-Element hinzugefügt.
+                   -->
+               <ul>
+                 <li>
+                    <a href="/allebenutzer/startseite.html">
+                    <img src="/icons/home.png" alt="dieses Bild zeigt ein Haus-Symbol">
+                     <!--Das .png-Symbol, dessen Pfad im src-Attribut des <img>-Elements angegeben ist, wird eingefügt. Das alt-Attribut wird für die Barrierefreiheit verwendet und liefert eine Beschreibung des Icons.-->
+                    Startseite
+                    </a>
+                 </li>
+                 <li>
+                    <a href="/dienstautobenutzer/buchungssystem.html">
+                    <img src="/icons/calendar_time.png" alt="dieses Bild zeigt ein Kalender-Symbol">
+                    Buchungssystem
+                    </a>
+                 </li>
+                 <li>
+                  <a href="/inneredienstbenutzer/antragverwaltung.html">
+                  <img src="/icons/key.png" alt="dieses Bild zeigt ein Schlüssel-Symbol">
+                  Fahrzeugzuweisung
+                  </a>
+               </li>
+                 <li>
+                    <a href="/inneredienstbenutzer/benutzerverwaltung.html">
+                    <img src="/icons/users.png" alt="dieses Bild zeigt ein User-Symbol">
+                    Benutzerverwaltung
+                    </a>
+                 </li>
+                 <li>
+                    <a href="/inneredienstbenutzer/dienstautoverwaltung.html">
+                    <img src="/icons/car.png" alt="dieses Bild zeigt ein Auto-Symbol">
+                    Dienstautoverwaltung
+                    </a>
+                 </li>
+                 <li>
+                    <a href="#">
+                    <img src="/icons/settings.png" alt="dieses Bild zeigt ein Zahnrad-Symbol">
+                    Einstellungen
+                    </a>  
+                 </li>
+                 <li>
+                    <a href="#">
+                    <img src="/icons/question.png" alt="dieses Bild zeigt ein Fragezeichen-Symbol">
+                    Hilfe
+                    </a>
+                 </li>
+               </ul>    
+             </nav>
+         </div>
+         <main>
+            <h1>Fahrzeugzuweisung</h1>
+            <div class="main-container">
+               <!--
+                  Dieses <div>-Element enthält die Klasse "main-container", die das Formular umhüllt.
+               -->
+               <a href="/inneredienstbenutzer/ausstehendeantraege.html">
+                  <div class="green-bereich">
+                     <!--Dieses green-bereich" Element enthält ein <h2>-Element, das den Titel des Formulars anzeigt-->
+                     <h2 class="text-main-container">ausstehende Anträge</h2>
+                  </div>
+               </a>
+               <a href="/inneredienstbenutzer/geoffneteantraege.html">
+                  <div class="green-bereich">
+                     <h2 class="text-main-container">geöffnete Anträge</h2>
+                  </div>
+               </a>
+               <a href="/inneredienstbenutzer/abgelehnteantraege.html">
+                  <div class="green-bereich">
+                     <h2 class="text-main-container">abgelehnte Anträge</h2>
+                  </div>
+               </a>
+               <a href="/inneredienstbenutzer/geschlosseneantraege.html">
+                  <div class="green-bereich">
+                     <h2 class="text-main-container">geschlossene Anträge</h2>
+                  </div>
+               </a>
+            </div>
+         </main>
+         </div>
+         <div class="button-wrapper">
+            <button onclick="history.go(-1)" class="white-button"
+            id="z&uuml;ruck" type="submit">z&uuml;ruck</button>
+         </div>
+      </div>
+      <footer class="footer">
+         <div class="footer-columns">
+            <div class="footer-column">
+               <a href="#">Impressum</a>
+            </div>
+            <div class="footer-column">
+               <a href="#">Datenschutz</a>
+            </div>
+            <div class="footer-column">
+               <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte vorbehalten.</a>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>

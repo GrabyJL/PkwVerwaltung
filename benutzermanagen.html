@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Fuhrparksystem</title>
+    <link rel="stylesheet" href="/css/layout.css">
+  </head>
+  <body>
+    <div class="wrapper-body">
+      <header class="header-container">
+        <img id="headerImage" src="/images/1x/bundeslogo.png"
+          alt="Bundesministerium Logo" />
+      </header>
+      <nav class="horizontal-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a
+              href="/allebenutzer/intranetanmeldung.html">Intranet</a></li>
+          <li class="breadcrumb-item"><a href="/allebenutzer/startseite.html">Startseite</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Benutzer
+            managen</li>
+        </ol>
+      </nav>
+      <div>
+        <button class="button white-button" name="abmelden" type="button">abmelden</button>
+      </div>
+      <div class="content-wrapper">
+        <div id="leftWrapper" class="search-bar">
+          <form id="formManagen" action="#" method="get">
+            <div class="search-input">
+              <input type="text" id="searchInput" aria-label="Suche"
+                placeholder="Suche" required>
+              <button type="submit" id="searchButton">
+                <img src="/icons/search.png"
+                  alt="dieses Bild zeigt ein Lupen-Symbol" width="20"
+                  height="20">
+              </button>
+            </div>
+          </form>
+          <nav class="vertical-nav">
+            <ul>
+              <li>
+                <a href="/allebenutzer/startseite.html">
+                  <img src="/icons/home.png"
+                    alt="dieses Bild zeigt ein Haus-Symbol">
+                  Startseite
+                </a>
+              </li>
+              <li>
+                <a href="/dienstautobenutzer/buchungssystem.html">
+                  <img src="/icons/calendar_time.png"
+                    alt="dieses Bild zeigt ein Kalender-Symbol">
+                  Buchungssystem
+                </a>
+              </li>
+              <li>
+                <a href="/inneredienstbenutzer/fahrzeugzuweisung.html">
+                  <img src="/icons/key.png"
+                    alt="dieses Bild zeigt ein Schlüssel-Symbol">
+                  Fahrzeugzuweisung
+                </a>
+              </li>
+              <li>
+                <a href="/inneredienstbenutzer/benutzerverwaltung.html">
+                  <img src="/icons/users.png"
+                    alt="dieses Bild zeigt ein User-Symbol">
+                  Benutzerverwaltung
+                </a>
+              </li>
+              <li>
+                <a href="/inneredienstbenutzer/dienstautoverwaltung.html">
+                  <img src="/icons/car.png"
+                    alt="dieses Bild zeigt ein Auto-Symbol">
+                    Dienstautoverwaltung
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/settings.png"
+                    alt="dieses Bild zeigt ein Zahnrad-Symbol">
+                  Einstellungen
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/question.png"
+                    alt="dieses Bild zeigt ein Fragezeichen-Symbol">
+                  Hilfe
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <main>
+          <h1>Benutzer managen</h1>
+          <div class="benutzermanagen-container">
+            <!--Die Benutzerverwaltungstabelle ermöglicht dem Benutzer, 
+                  die Benutzerinformationen zu bearbeiten oder den Benutzer aus der Liste der Benutzer zu entfernen; 
+                  das Benutzerprofil wird an die (@TODO Datenbank?) Benutzerdatei gesendet.  MUSS ICH DAS DATENBANK MACHEN? :(-->
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">ID Benutzer</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Nachname</th>
+                  <th scope="col">Abteilung</th>
+                  <th scope="col">Aktion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#">0001</a></td>
+                  <td>aktiv</td>
+                  <td>Satoshi</td>
+                  <td>Nakamoto</td>
+                  <td>Entwicklung</td>
+                  <td class="aktionen">
+                    <button class="blau-btn">
+                      <!--Um die Funktionalität der Bearbeitung eines Benutzers zu verdeutlichen, wird mittels eines <a>-Tags auf das Beispiel des Benutzers 0001 verwiesen.-->
+                      <a id="demoantrag-text" href="/inneredienstbenutzer/benutzer0001.html">bearbeiten</a>
+                    </button>
+                    <button class="schwarz-btn">l&ouml;schen</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#">0002</a></td>
+                  <td>aktiv</td>
+                  <td>Jane</td>
+                  <td>Doe</td>
+                  <td>Marketing</td>
+                  <td class="aktionen">
+                    <button class="blau-btn">bearbeiten</button>
+                    <button class="schwarz-btn">l&ouml;schen</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#">0003</a></td>
+                  <td>inaktiv</td>
+                  <td>Lara</td>
+                  <td>Craft</td>
+                  <td>Marketing</td>
+                  <td class="options">
+                    <button class="blau-btn">bearbeiten</button>
+                    <button class="schwarz-btn">l&ouml;schen</button>
+                  </td>
+                  <!--In der Spalte "Optionen" wird ein separates <td class="options"> verwendet, um Schaltflächen zum Bearbeiten und Löschen von Benutzern bereitzustellen. Die Schaltflächen haben CSS-Klassen (blau-btn und schwarz-btn) für die Gestaltung.-->
+                </tr>
+                <tr>
+                  <td><a href="#">0004</a></td>
+                  <td>aktiv</td>
+                  <td>Sara</td>
+                  <td>Lee</td>
+                  <td>Finanzen</td>
+                  <td class="aktionen">
+                    <button class="blau-btn">bearbeiten</button>
+                    <button class="schwarz-btn">l&ouml;schen</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="button-wrapper">
+            <button onclick="history.go(-1)" class="white-button"
+            id="z&uuml;ruck" type="submit">z&uuml;ruck</button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <a href="#">Impressum</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Datenschutz</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte
+            vorbehalten.</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

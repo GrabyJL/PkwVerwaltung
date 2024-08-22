@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuhrparksystem</title>
+    <link rel="stylesheet" href="/css/layout.css">
+  </head>
+  <body>
+    <div class="wrapper-body">
+      <header class="header-container">
+        <img id="headerImage" src="/images/1x/bundeslogo.png"
+          alt="Bundesministerium Logo" />
+      </header>
+      <nav class="horizontal-nav" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a
+              href="/allebenutzer/intranetanmeldung.html">Intranet</a></li>
+          <li class="breadcrumb-item"><a href="/allebenutzer/startseite.html">Startseite</a></li>
+          <li class="breadcrumb-item"><a
+              href="/inneredienstbenutzer/benutzerverwaltung.html">Benutzer
+              Verwaltung</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Benutzer 0001</li>
+        </ol>
+      </nav>
+      <div>
+        <button class="button white-button" name="abmelden" type="button">abmelden</button>
+      </div>
+      <div class="content-wrapper">
+        <div id="leftWrapper" class="search-bar">
+          <form action="#" method="get">
+            <div class="search-input">
+              <input type="text" id="searchInput" aria-label="Suche"
+                placeholder="Suche" required>
+              <button type="submit" id="searchButton">
+                <img src="/icons/search.png"
+                  alt="dieses Bild zeigt ein Lupen-Symbol" width="20"
+                  height="20">
+              </button>
+            </div>
+          </form>
+          <nav class="vertical-nav">
+            <ul>
+              <li>
+                <a href="/allebenutzer/startseite.html">
+                  <img src="/icons/home.png"
+                    alt="dieses Bild zeigt ein Haus-Symbol">
+                  Startseite
+                </a>
+              </li>
+              <li>
+                <a href="/dienstautobenutzer/buchungssystem.html">
+                  <img src="/icons/calendar_time.png"
+                    alt="dieses Bild zeigt ein Kalender-Symbol">
+                  Buchungssystem
+                </a>
+              </li>
+              <li>
+                <a href="/inneredienstbenutzer/fahrzeugzuweisung.html">
+                  <img src="/icons/key.png"
+                    alt="dieses Bild zeigt ein Schlüssel-Symbol">
+                  Fahrzeugzuweisung
+                </a>
+              </li>
+              <li>
+                <a href="/inneredienstbenutzer/benutzerverwaltung.html">
+                  <img src="/icons/users.png"
+                    alt="dieses Bild zeigt ein User-Symbol">
+                  Benutzerverwaltung
+                </a>
+              </li>
+              <li>
+                <a href="/inneredienstbenutzer/dienstautoverwaltung.html">
+                  <img src="/icons/car.png"
+                    alt="dieses Bild zeigt ein Auto-Symbol">
+                    Dienstautoverwaltung
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/settings.png"
+                    alt="dieses Bild zeigt ein Zahnrad-Symbol">
+                  Einstellungen
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icons/question.png"
+                    alt="dieses Bild zeigt ein Fragezeichen-Symbol">
+                  Hilfe
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <main>
+          <h1>Benutzer 0001</h1>
+          <div class="formular-benutzeranlegen">
+            <form id="formAnlegen" action='#' method="post">
+              <table id="benutzeranlegen">
+                <tbody id="tbodyAnlegen">
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen">
+                      <label class="details" for="name">Name:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen"> <input
+                        class="inputBenutzeranlegen" type="text" id="name"
+                        aria-label="Name des Benutzers" name="Name"
+                        value="Satoshi">
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen">
+                      <label class="details" for="nachname">Nachname:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen"> <input
+                        class="inputBenutzeranlegen" type="text" id="nachname"
+                        aria-label="Nachname des Benutzers" name="nachname"
+                        value="Nakamoto">
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen"> <label class="details"
+                        for="einstellungsart">Einstellungsart:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen">
+                      <select class="formSelect" id="einstellungsart"
+                        name="Einstellungsart" required>
+                        <option value>Einstellungsart ausw&auml;hlen</option>
+                        <option value="beamte" selected>Beamte</option>
+                        <option value="tarifbesch&auml;tigte">Tarifbesch&auml;tigte</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen">
+                      <label class="details" for="referat">Referat:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen"> <input
+                        class="input input-klein" type="text" id="referat"
+                        aria-label="Referat" name="referat" value="XY">
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen">
+                      <label class="details" for="arbeitsbereich">Arbeitsbereich:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen"> <input
+                        class="input-klein" type="text" id="arbeitsbereich"
+                        aria-label="Arbeitsbereich" name="arbeitsbereich"
+                        value="Z1">
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen"> <label class="details"
+                        for="bundesministerium">Bundesministerium:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen">
+                      <select class="formSelect" id="bundesministerium"
+                        name="Bundesministerium" required>
+                        <option value>Bundesministerium ausw&auml;hlen</option>
+                        <option value="BMWK">BMWK</option>
+                        <option value="BMF" selected> BMF</option>
+                        <option value="BMI">BMI</option>
+                        <option value="AA">AA</option>
+                        <option value="BMJ">BMJ</option>
+                        <option value="BMAS">BMAS</option>
+                        <option value="BMVg">BMVg</option>
+                        <option value="BMEL">BMEL</option>
+                        <option value="BMFSFJ">BMFSFJ</option>
+                        <option value="BMG">BMG</option>
+                        <option value="BMDV">BMDV</option>
+                        <option value="BMUV">BMUV</option>
+                        <option value="BMBF">BMBF</option>
+                        <option value="BMZ">BMZ</option>
+                        <option value="BMWSB">BMWSB</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen"><label class="details"
+                        for="f&uuml;hrerscheinklasse">F&uuml;hrerschein Klasse:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen">
+                      <select id="f&uuml;hrerscheinklasse"
+                        name="f&uuml;hrerschein Klasse" required>
+                        <option value>F&uuml;hrerschein Klasse ausw&auml;hlen</option>
+                        <option value="A1">A1</option>
+                        <option value="A">A</option>
+                        <option value="B" selected>B</option>
+                        <option value="C1">C1</option>
+                        <option value="C">C</option>
+                        <option value="D1">D1</option>
+                        <option value="D">D</option>
+                        <option value="BE">BE</option>
+                        <option value="C1E">C1E</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen">
+                      <label class="details" for="fuererscheinnummer">F&uuml;hrerscheinnummer:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen"> <input
+                        class="input input-klein" type="text"
+                        id="fuererscheinnummer"
+                        aria-label="F&uuml;hrerscheinnummer"
+                        name="fuererscheinnummer" value="XY23S90">
+                    </td>
+                  </tr>
+                  <tr class="form-rowbenutzeranlegen">
+                    <td class="form-tdbenutzeranlegen">
+                      <label class="details"
+                        for="f&uuml;hrerscheing&uuml;ltigbis">F&uuml;hrerschein
+                        g&uuml;ltig bis:</label>
+                    </td>
+                    <td class="form-tdbenutzeranlegen"> <input
+                        class="input input-klein" type="date"
+                        id="f&uuml;hrerscheing&uuml;ltigbis"
+                        aria-label="F&uuml;hrerschein g&uuml;ltig bis"
+                        name="f&uuml;hrerschein g&uuml;ltig bis"
+                        value="2030-12-12">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div>
+                <button type="submit" class="button tourkis-btn">speichern</button>
+              </div>
+            </form>
+          </div>
+          <div class="button-wrapper">
+            <button onclick="history.go(-1)" class="white-button"
+            id="z&uuml;ruck" type="submit">z&uuml;ruck</button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <a href="#">Impressum</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Datenschutz</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">&copy; 2023 Bundesministerium "XY". Alle Rechte
+            vorbehalten.</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
